@@ -291,7 +291,7 @@ function send_request(param){
     if (this.readyState == 4 && this.status == 200) {
       //document.getElementById("demo").innerHTML = this.responseText;
       var ourData = JSON.parse(this.responseText);
-      
+      extract_name(ourData)
       document.getElementById("fromdiv").innerHTML=ourData;
     }; 
   
@@ -304,7 +304,16 @@ xhttp.setRequestHeader('Content-Type','application/json');
 
   xhttp.send(param);
 }
+function extract_name(data){
+	var len = data.length;
+	var name=new Array();
+	for(var i=0;i<len;i++){
+		name.push(data[i].Name)
 
+	}
+	document.getElementById("formdiv").innerHTML=name;
+
+}
 </script>
 </body>
 </html>

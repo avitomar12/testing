@@ -128,12 +128,12 @@
 <div>
 	<button onclick="opensuprise()">click me to see magic</button>
 	
-	<form id="formdiv" action="javascript:send_request(this)" >
+	<form id="formdiv" action="javascript:send_request()" method="POST">
 				<label for="SKU">SKU</label><br>
 		<input type="number" id="SKU" name="SKU" ><br>
 
 		<label for="EAN">EAN</label><br>
-		<input type="number" id="Name" name="Name" ><br><br>
+		<input type="number" id="EAN" name="Name" ><br><br>
 
 		<label for="fname">Name</label><br>
 		<input type="text" id="fname" name="fname" ><br>
@@ -280,11 +280,18 @@ function opensuprise() {
 }
 
 
-
-function send_request(param){
+function send_request(){
 	
-
-	document.getElementById("fromdiv").innerHTML="Successfull";
+	
+	console.log(document.getElementById("SKU").value);
+	params={ 'SKU':document.getElementById("SKU").value,
+	'EAN':document.getElementById("EAN").value,
+	'Name':document.getElementById("fname").value,
+	'stock_quantity':document.getElementById("stockquantity").value,
+	'price':document.getElementById("price").value}
+	
+ //don't submit
+	document.getElementById("fromdiv").innerHTML=params;
 
 	var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -299,10 +306,10 @@ function send_request(param){
   xhttp.open("POST", "enter the URL", true);
 xhttp.setRequestHeader('Content-Type','application/json');
   
-    var param=JSON.parse(param);
-	document.getElementById("fromdiv").innerHTML=param;
+    var params=JSON.stringify(params);
+	document.getElementById("fromdiv").innerHTML=params;
 
-  xhttp.send(param);
+  xhttp.send(params);
 }
 function extract_name(data){
 	var len = data.length;

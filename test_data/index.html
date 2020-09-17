@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 50%;
+      }
+      
+      table, th, td {
+        border: 1px solid white;
+        text-align: left;
+      }
+      </style>
+  </head>
+<body>
+
+<div id="test1">
+  <label for="cars">Choose a car:</label>
+
+  <select onChange="loadDoc(this.value)">
+    <option value="1">Car</option>
+    <option value="2">Bike</option>
+  </select>
+  <p id="value"></p>
+
+</select>
+<table id=table>
+  
+</table>
+</div>
+<script >
+function loadDoc(value) {
+  //document.getElementById("value").innerHTML=value
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //document.getElementById("demo").innerHTML = this.responseText;
+      var ourData = JSON.parse(this.responseText);
+      
+      renderHTML(ourData);
+    }; 
+  
+  }
+  xhttp.open("POST", "http://127.0.0.1:5000/test1", true);
+xhttp.setRequestHeader('Content-Type','text/plain');
+  
+    var param=JSON.parse("1")
+
+  xhttp.send(value);
+}
+function renderHTML(data) {
+  
+
+  var len = data.length;
+  var txt = "<tr><th> ID </th><th> Name</th><tr>";
+  if(len > 0){
+      for(var i=0;i<len;i++){
+          txt += "<tr><td>"+data[i].id+"</td><td>"+data[i].Name+"</td></tr>";                        
+          }           
+                    document.getElementById("table").innerHTML=txt;
+}
+}
+
+</script>
+
+</body>
+</html>

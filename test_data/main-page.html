@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Change me</title>
+<link rel="stylesheet" href="./css/style.css"/>
+	<!--font-awesome-->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<section>
+<!--main--------------------------->
+<div class="main-page">
+<div class="navigation-container">
+
+	<!--logo-->
+	<a href="#" class="logo">Change title</a>
+	<!--menu-->
+	<div class="menu">
+	<ul>
+	<li><a href="#">Product</a></li>
+	<li><a href="#">About Us</a></li>
+	<li><a href="#">Contact US</a></li>
+	<li><a href="#">Market</a></li>
+	<li><a href="#">Change me</a></li>
+	<li>
+	<div class="login-now">
+		<a href="./login.html">Login</a>
+		</div>
+	</li>
+	<div class="login-now">
+		<a href="#">Register</a>
+		</div>
+	</li>
+	</ul>
+	</div>
+	<!--cart-->
+	<a href="#" class="cart"><img src="images/p-icon.png"></a>
+	
+</div>
+	
+	
+<!--PRODUCT-IMAGE-->
+	<!--1---------------------------->
+	<div class="product-img img1 active-product">
+	<img src="images/product-1.png">
+	</div>
+	<!--2---------------------------->
+	<div class="product-img img2">
+	<img src="images/product-2.png">
+	</div>
+	<!--3---------------------------->
+	<div class="product-img img3">
+	<img src="images/product-3.png">
+	</div>
+	<!--4---------------------------->
+	<div class="product-img img4">
+	<img src="images/product-4.png">
+	</div>
+	
+<!--tools--->
+<!-- <div class="tools">
+
+	<div class="order-now">
+	<a href="#">Order Now</a>
+	</div>
+
+	<div class="prescription">
+	<a href="#">Prescription</a>
+	</div>
+
+	<div class="more-details">
+	<a href="#">More-details</a>
+	</div>
+</div> -->
+</div>	
+<!--product-container-->
+<div class="product-container">
+
+	<div class="product-list">
+<!--1------------------------------>
+		<div class="box-1">
+		<!--heading-->
+		<p class="heading">Product-1</p>
+		<!--product-icon-->
+		<div class="p-icon">
+		<i class="fas fa-headphones-alt"></i>	
+		</div>
+		<!--type-->
+		<p class="type">Wireless<br>Headphone</p>
+		</div>
+<!--2------------------------------>
+		<div class="box-2 active">
+		<!--heading-->
+		<p class="heading">Product-2</p>
+		<!--product-icon-->
+		<div class="p-icon">
+		<i class="fas fa-shoe-prints"></i>	
+		</div>
+		<!--type-->
+		<p class="type">Nike<br>Sport Shoes</p>
+		</div>
+<!--3------------------------------>
+		<div class="box-3">
+		<p class="heading">Product-3</p>
+		<!--product-icon-->
+		<div class="p-icon">
+		<i class="far fa-clock"></i>	
+		</div>
+		<!--type-->
+			<p class="type">Vision<br>Supplements</p>
+		</div>
+<!--4------------------------------>
+		<div class="box-4">
+		<p class="heading">Product-4</p>
+		<!--product-icon-->
+		<div class="p-icon">
+		<i class="fas fa-camera"></i>	
+		</div>
+		<!--type-->
+			<p class="type">Locomotion<br>Victuals</p>	
+		</div>
+	
+	</div>
+	
+</div>
+
+<div>
+	<button onclick="opensuprise()">click me to see magic</button>
+	
+	<form id="formdiv" action="javascript:send_request(this)" >
+				<label for="SKU">SKU</label><br>
+		<input type="number" id="SKU" name="SKU" ><br>
+
+		<label for="EAN">EAN</label><br>
+		<input type="number" id="Name" name="Name" ><br><br>
+
+		<label for="fname">Name</label><br>
+		<input type="text" id="fname" name="fname" ><br>
+		
+		<label for="fname">Stock quantity</label><br>
+		<input type="number" id="stockquantity" name="stockquantity" ><br>
+		
+		<label for="fname">Price</label><br>
+		<input type="number" id="price" name="price" ><br>
+		<input type="submit" value="Submit">
+	  </form>
+	  <p id="fromdiv">
+
+	  </p>
+
+</div>
+
+<div class="mid-container">
+	<p align="center">
+ <select onChange="loadDoc(this.value)">
+    <option value="1">Car</option>
+    <option value="2">Bike</option>
+  </select>
+	</p>
+<table id="table" align="center">
+</table>
+
+</div>
+<div class="bottom-container">
+	<div id style="display:flex;flex-direction:column" class>
+	<p class="bottom-type">
+		<ul>
+		<li>Features</li>
+		<li>Our Fees</li>
+		<li>API Documentation</li>
+		<li>Products</li>
+		<li>About Us</li> 
+		<li>About</li>
+		<li>Locker</li>
+		<li>Careers</li>
+		</ul>
+	</p>
+	</div>
+	<div>
+		<p class="bottom-type">
+		<ul>
+		<li>Blog</li>
+		<li>Announcements</li>
+		<li>Press</li>Press
+		<li>Newsletter</li>
+		<li>Status Page</li>
+		<li>Legal & Privacy</li>
+		<li>Privacy</li>
+		</ul>
+	</p>
+	</div>
+	<div>
+		<p class="bottom-type">	
+		<ul>
+		<li>Exchange Terms</li>
+		<li>Derivative Terms</li>
+		<li>General Notices & Terms</li>
+		<li>Support</li>
+		<li>Help Center</li>
+		<li>Contact Us</li>
+		<li>Follow Us</li>
+		</ul>
+	</p>
+	</div>
+</div>
+</section>
+
+
+<!--JQuery.js--------------------->
+	<script src="js/JQuery3.3.1.js" type="text/javascript"></script>
+<!--script-------------->
+	<script type="text/javascript">
+		/*--active-box--*/
+	$(document).on('click','.box-1,.box-2,.box-3,.box-4',function(){
+	$(this).addClass('active').siblings().removeClass('active')
+});
+		/*product-Img active*/
+		$(document).on('click','.box-1',function(){
+	$('.img1').addClass('active-product').siblings('.img3,.img2,.img4').removeClass('active-product')
+});
+	
+		$(document).on('click','.box-2',function(){
+	$('.img2').addClass('active-product').siblings('.img3,.img1,.img4').removeClass('active-product')
+});
+		
+			$(document).on('click','.box-3',function(){
+	$('.img3').addClass('active-product').siblings('.img1,.img2,.img4').removeClass('active-product')
+});
+		
+			$(document).on('click','.box-4',function(){
+	$('.img4').addClass('active-product').siblings('.img3,.img2,.img1').removeClass('active-product')
+});
+</script>
+
+
+
+<script >
+function loadDoc(value) {
+  //document.getElementById("value").innerHTML=value
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //document.getElementById("demo").innerHTML = this.responseText;
+      var ourData = JSON.parse(this.responseText);
+      
+      renderHTML(ourData);
+    }; 
+  
+  }
+  xhttp.open("POST", "http://127.0.0.1:5000/test1", true);
+xhttp.setRequestHeader('Content-Type','text/plain');
+  
+    var param=JSON.parse("1")
+
+  xhttp.send(value);
+}
+function renderHTML(data) {
+  
+
+  var len = data.length;
+  var txt = "<tr><th> ID </th><th> Name</th><tr>";
+  if(len > 0){
+      for(var i=0;i<len;i++){
+          txt += "<tr><td>"+data[i].id+"</td><td>"+data[i].Name+"</td></tr>";                        
+          }           
+                    document.getElementById("table").innerHTML=txt;
+}
+
+
+
+}
+function opensuprise() {
+  var x = document.getElementById("formdiv");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+
+function send_request(param){
+	
+
+	document.getElementById("fromdiv").innerHTML="Successfull";
+
+	var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      //document.getElementById("demo").innerHTML = this.responseText;
+      var ourData = JSON.parse(this.responseText);
+      
+      document.getElementById("fromdiv").innerHTML=ourData;
+    }; 
+  
+  }
+  xhttp.open("POST", "enter the URL", true);
+xhttp.setRequestHeader('Content-Type','application/json');
+  
+    var param=JSON.parse(param);
+	document.getElementById("fromdiv").innerHTML=param;
+
+  xhttp.send(param);
+}
+
+</script>
+</body>
+</html>
